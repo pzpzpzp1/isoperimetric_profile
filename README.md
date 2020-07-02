@@ -17,14 +17,34 @@ IP lower bound dependencies
 
 ## Build
 
-* Go to ipvoronoi folder. 
-* Use cmake to generate project solution. (REQUIRES CGAL)
-* Build ipvoronoi project. (this step might differ depending on OS)
+* Go to "ipvoronoi" folder. 
+* Use cmake to generate project solution into "build" folder. (REQUIRES CGAL)
+* Build "ipvoronoi" project. (this step might differ depending on OS)
 * Make sure compiled executable is accessible as "isoperimetric_profile\ipvoronoi\build\Release\ipvoronoi.exe"
-* Go back to isoperimetric_profile folder.
-* Run addpath(genpath('.'));
-* Go to generatefigures/generateGeneralIProfiles folder.
+* Go back to "isoperimetric_profile" folder.
+* Run "addpath(genpath('.'));"
+* Go to "generatefigures/generateGeneralIProfiles" folder.
 * Run generateGProfile.m
+
+## Common errors
+
+* "isotropicTotalVariation" undefined - make sure TVProfile is installed and on matlab's path. Or set params.skipTV to before calling aggregateProcessing.
+* cmake isn't generating anything that can be built. - make sure CGAL and BOOST are both installed.
+
+## Methods of interest
+
+IP bounds
+* isoperim_profile_v3 - computes IP upper bound by medial axis traversal
+* morphOpenBound - computes IP upper bound by morphological opening
+* getTVProfile - wrapper around TVProfile to compute IP lower bound
+
+Visualization
+* visualizeProfile - plots IP bounds of a domain
+* extractAggregateIPEnvelope - combine multiple bounds into one summarizing envelope
+* visualizeMedAxis - plots medial axis
+
+Useful Helper Functions
+* getMaxInscribedCircle - gets maximum inscribed circle in a 2D domain
 
 ## Authors
 
