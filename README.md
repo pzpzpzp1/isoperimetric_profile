@@ -28,10 +28,11 @@ IP lower bound dependencies
 * Go to "generatefigures/generateGeneralIProfiles" folder.
 * Run generateGProfile.m
 
-## Common issues
+## Issues
 
 * "isotropicTotalVariation" undefined - make sure TVProfile is installed and on matlab's path. Or set params.skipTV to before calling aggregateProcessing.
 * cmake isn't generating anything that can be built. - make sure CGAL and BOOST are both installed.
+* "norms" undefined - norms comes from CVX. Make sure it's installed.
 
 ## Useful Functions
 
