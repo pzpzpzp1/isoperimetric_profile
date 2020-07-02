@@ -1,7 +1,9 @@
 # Medial Axis Isoperimetric Profiles
 
-This project computes upper bounds on the isoperimetric profile using the medial axis.
+This project computes upper bounds on the isoperimetric profile using the medial axis and morphological opening.
 It also contains code to compute the improved total variation lower bound. 
+
+* Presentation of Associated Paper - [Video](https://www.youtube.com/watch?v=ynTFKEjiNcA)
 
 ### Prerequisites
 
@@ -15,7 +17,7 @@ IP lower bound dependencies
 * [CVX](http://cvxr.com/cvx/) - Convex problem solver for Matlab
 * [Mosek](https://www.mosek.com/) - Convex problem solver. (Optional, but recommended)
 
-## Build
+## Build and Run
 
 * Go to "ipvoronoi" folder. 
 * Use cmake to generate project solution into "build" folder. (REQUIRES CGAL)
@@ -26,12 +28,12 @@ IP lower bound dependencies
 * Go to "generatefigures/generateGeneralIProfiles" folder.
 * Run generateGProfile.m
 
-## Common errors
+## Common issues
 
 * "isotropicTotalVariation" undefined - make sure TVProfile is installed and on matlab's path. Or set params.skipTV to before calling aggregateProcessing.
 * cmake isn't generating anything that can be built. - make sure CGAL and BOOST are both installed.
 
-## Methods of interest
+## Useful Functions
 
 IP bounds
 * isoperim_profile_v3 - computes IP upper bound by medial axis traversal
@@ -43,7 +45,7 @@ Visualization
 * extractAggregateIPEnvelope - combine multiple bounds into one summarizing envelope
 * visualizeMedAxis - plots medial axis
 
-Useful Helper Functions
+Helper Functions
 * getMaxInscribedCircle - gets maximum inscribed circle in a 2D domain
 
 ## Authors
